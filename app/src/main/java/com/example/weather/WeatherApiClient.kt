@@ -23,6 +23,6 @@ class WeatherApiClient {
 
     companion object {
         private const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
-        private const val API_KEY = "4ad96273d6564aababd2a351a30fd3c2" // Αντικαταστήστε με το δικό σας κλειδί API
+        private const val API_KEY = "4ad96273d6564aababd2a351a30fd3c2" 
     }
 }
