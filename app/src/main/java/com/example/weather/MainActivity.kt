@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         textDescription = findViewById(R.id.textDescription)
 
         btnGetWeather.setOnClickListener {
-            val city = "Athens" // Σταθερή τιμή για την Αθήνα
+            val city = "Athens"
             if (city.isNotEmpty()) {
                 val weatherApiClient = WeatherApiClient()
                 weatherApiClient.getWeather(city, object : Callback<WeatherResponse> {
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI(weatherResponse: WeatherResponse) {
-        textCity.text = "City: Athens" // Σταθερή τιμή για την Αθήνα
+        textCity.text = "City: Athens"
         val temperatureCelsius = weatherResponse.main.temp - 273.15
         textTemperature.text = "Temperature: ${String.format("%.2f", temperatureCelsius)}°C"
         textDescription.text = "Description: ${weatherResponse.weather[0].description}"
