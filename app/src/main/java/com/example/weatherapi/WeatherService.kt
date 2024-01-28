@@ -9,4 +9,11 @@ interface WeatherService {
         @Query("q") city: String,
         @Query("appid") apiKey: String
     ): MainActivity.WeatherData
+
+    @GET("weather")
+    suspend fun getWeatherByCoordinates(
+        @Query("lat") latitude: String,
+        @Query("lon") longitude: String,
+        @Query("appid") apiKey: String
+    ): MainActivity.WeatherData
 }
